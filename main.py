@@ -4,7 +4,7 @@ import datareader
 
 games = datareader.readGames('./dataset/tic-tac-toe.data')
 
-boost = Boost(len(games),7)
+boost = Boost(len(games),1000)
 boost_1 = Boost(len(games),1)
 boost_2 = Boost(len(games),2)
 boost_4 = Boost(len(games),4)

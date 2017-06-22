@@ -27,7 +27,7 @@ class Boost:
         for i in range(self.nstumps):
             self.choose_stump(samples)
             self.update_weights(self.chosen_stumps[-1],samples)
-            print(self.weights[-4:])
+            #print(self.weights[-4:])
 
         print("Stumps: "+ str(self.chosen_stumps))
         print("Errors: "+ str(self.chosen_errors))
@@ -47,9 +47,9 @@ class Boost:
 
             # find the stump classification for this sample
             if (sample[characteristic] == value ):
-              predict_stump_class = 1 if prediction == "positive" else 0
+              predict_stump_class = 1 if prediction == "positive" else -1
             else:
-              predict_stump_class = 0 if prediction == "positive" else 1
+              predict_stump_class = -1 if prediction == "positive" else 1
 
             #print(predict_stump_class)
 
@@ -88,34 +88,34 @@ class Boost:
         # iterate over all possible stumps and chose the local best
         for characteristic_id, (characteristic,value, prediction) in enumerate(self.stumps):
 
-            if characteristic_id not in self.chosen_stumps:
-                error = 0.0
-                # iterate over all samples
-                #for i,sample in enumerate(samples):
-                #    #print(sample[characteristic],value,sample[9])
-                #    if (sample[characteristic] == value and sample[9] == "negative" ):
-                #      error += self.weights[i][0]
-                #    elif (sample[characteristic] != value and sample[9] == "positive" ):
-                #      error += self.weights[i][0]
+            #if characteristic_id not in self.chosen_stumps:
+            error = 0.0
+            # iterate over all samples
+            #for i,sample in enumerate(samples):
+            #    #print(sample[characteristic],value,sample[9])
+            #    if (sample[characteristic] == value and sample[9] == "negative" ):
+            #      error += self.weights[i][0]
+            #    elif (sample[characteristic] != value and sample[9] == "positive" ):
+            #      error += self.weights[i][0]
 
-                # iterate over all samples
-                for i,sample in enumerate(samples):
-                    #print(sample[characteristic],value,sample[9])
-                    if (sample[characteristic] == value and sample[9] != prediction ):
-                      error += self.weights[i][0]
-                    elif (sample[characteristic] != value and sample[9] == prediction ):
-                      error += self.weights[i][0]
+            # iterate over all samples
+            for i,sample in enumerate(samples):
+                #print(sample[characteristic],value,sample[9])
+                if (sample[characteristic] == value and sample[9] != prediction ):
+                  error += self.weights[i][0]
+                elif (sample[characteristic] != value and sample[9] == prediction ):
+                  error += self.weights[i][0]
 
-                print("[test] characteristic(" + str(characteristic_id) + ")["+str(self.stumps[characteristic_id][0]) + ","  + str(self.stumps[characteristic_id][1]) +" ]   error: " + str(error) )
-                # Keep the lowest error found
-                    ##print("Comparando: " + str(min_error) + " ? " + str(error)+ ": " + str(min_error >= error)   )
-                if min_error is None:
-                    min_error = error
-                    stump_choosen_id = characteristic_id
-                elif min_error > error:
-                    #print("troquei")
-                    min_error = error
-                    stump_choosen_id = characteristic_id
+            #print("[test] characteristic(" + str(characteristic_id) + ")["+str(self.stumps[characteristic_id][0]) + ","  + str(self.stumps[characteristic_id][1]) +" ]   error: " + str(error) )
+            # Keep the lowest error found
+                ##print("Comparando: " + str(min_error) + " ? " + str(error)+ ": " + str(min_error >= error)   )
+            if min_error is None:
+                min_error = error
+                stump_choosen_id = characteristic_id
+            elif min_error > error:
+                #print("troquei")
+                min_error = error
+                stump_choosen_id = characteristic_id
 
         print("[Chosen] characteristic(" + str(stump_choosen_id) + ")["+str(self.stumps[stump_choosen_id][0]) + ","  + str(self.stumps[stump_choosen_id][1]) + "," + str(self.stumps[stump_choosen_id][2])  +"]   error: " + str(min_error) )
 
