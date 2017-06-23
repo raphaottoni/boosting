@@ -27,7 +27,6 @@ class Boost:
         for i in range(self.nstumps):
             self.choose_stump(samples)
             self.update_weights(self.chosen_stumps[-1],samples)
-            #print(self.weights[-4:])
 
         print("Stumps: "+ str(self.chosen_stumps))
         print("Errors: "+ str(self.chosen_errors))
@@ -51,17 +50,8 @@ class Boost:
             else:
               predict_stump_class = -1 if prediction == "positive" else 1
 
-            #print(predict_stump_class)
-
-            # Add weak classifier contribution
-            #print(str(self.chosen_alphas[i]) + "*" + str(predict_stump_class))
-            #predict_stump_class = 1 if prediction == "positive" else  -1
-
-            #class_sample += self.chosen_alphas[i]*predict_stump_class
             class_sample += self.chosen_alphas[i]*predict_stump_class
 
-        #print("ta aki")
-        #print(class_sample)
         resultado =  1 if class_sample > 0.0 else -1
         return resultado
 
@@ -90,13 +80,6 @@ class Boost:
 
             #if characteristic_id not in self.chosen_stumps:
             error = 0.0
-            # iterate over all samples
-            #for i,sample in enumerate(samples):
-            #    #print(sample[characteristic],value,sample[9])
-            #    if (sample[characteristic] == value and sample[9] == "negative" ):
-            #      error += self.weights[i][0]
-            #    elif (sample[characteristic] != value and sample[9] == "positive" ):
-            #      error += self.weights[i][0]
 
             # iterate over all samples
             for i,sample in enumerate(samples):
@@ -106,9 +89,7 @@ class Boost:
                 elif (sample[characteristic] != value and sample[9] == prediction ):
                   error += self.weights[i][0]
 
-            #print("[test] characteristic(" + str(characteristic_id) + ")["+str(self.stumps[characteristic_id][0]) + ","  + str(self.stumps[characteristic_id][1]) +" ]   error: " + str(error) )
             # Keep the lowest error found
-                ##print("Comparando: " + str(min_error) + " ? " + str(error)+ ": " + str(min_error >= error)   )
             if min_error is None:
                 min_error = error
                 stump_choosen_id = characteristic_id
@@ -143,7 +124,6 @@ class Boost:
             self.weights[i][0] = (self.weights[i][0]/2) * (1/error)
           else:
             self.weights[i][0] = (self.weights[i][0]/2) * (1/(1 - error))
-          #print("new weight: " + str(self.weights[i][0]))
 
 
 
