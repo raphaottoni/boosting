@@ -5,7 +5,7 @@ class Boost:
 
     # Class constructor
     def __init__(self,nsamples,nstumps):
-        print("Creating boosting algorithm with " + str(nsamples)+ " samples and " + str(nstumps) + " stubs" )
+        print("Creating boosting class for  " + str(nsamples)+ " samples and " + str(nstumps) + " stubs" )
         self.weights = np.full((nsamples,1),1.0/nsamples)
         self.nstumps = nstumps
         self.nsamples = nsamples
@@ -28,9 +28,9 @@ class Boost:
             self.choose_stump(samples)
             self.update_weights(self.chosen_stumps[-1],samples)
 
-        print("Stumps: "+ str(self.chosen_stumps))
-        print("Errors: "+ str(self.chosen_errors))
-        print("Alphas: " +str(self.chosen_alphas))
+        print("Chosen Stumps order: "+ str(self.chosen_stumps))
+        print("Stumps Errors: "+ str(self.chosen_errors))
+        print("Stumps Alphas: " +str(self.chosen_alphas))
 
 
     # Classify an sample
