@@ -98,7 +98,7 @@ class Boost:
                 min_error = error
                 stump_choosen_id = characteristic_id
 
-        print("[Chosen] characteristic(" + str(stump_choosen_id) + ")["+str(self.stumps[stump_choosen_id][0]) + ","  + str(self.stumps[stump_choosen_id][1]) + "," + str(self.stumps[stump_choosen_id][2])  +"]   error: " + str(min_error) )
+        #print("[Chosen] characteristic(" + str(stump_choosen_id) + ")["+str(self.stumps[stump_choosen_id][0]) + ","  + str(self.stumps[stump_choosen_id][1]) + "," + str(self.stumps[stump_choosen_id][2])  +"]   error: " + str(min_error) )
 
 
         # Add the selected stumps statistics to the chosen arrays

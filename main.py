@@ -1,22 +1,64 @@
 from boost import Boost
 import datareader
-from kfold import kfold
+#from kfold import kfold
+from random import shuffle
 
-
+# Read dataset
 games = datareader.readGames('./dataset/tic-tac-toe.data')
 
-boost = Boost(len(games),54)
-boost_1 = Boost(len(games),1)
-boost_2 = Boost(len(games),2)
-boost_4 = Boost(len(games),4)
-boost_5 = Boost(len(games),4)
-boost_8 = Boost(len(games),8)
-boost_16 = Boost(len(games),16)
-boost_64 = Boost(len(games),64)
+# Define K as in kfold
+k = 5
 
-boost.build_classifier(games)
+# Define nstumps as in the number of weak classifiers that would be used
+nstumps = 54
 
-print(kfold(boost,2,games))
+# Shuffle the dataset
+shuffle(games)
+
+# Begin Kfold by dividing dataset into k parts
+subset_size = int(len(games)/k)
+
+
+kfold_accuracy = 0.0
+
+for i in range(k):
+    test_data = games[i*subset_size:][:subset_size]
+    training_data = games[:i*subset_size] + games[(i+1)*subset_size:]
+
+    # Define a Adaboost classifier
+    boost = Boost(len(training_data),nstumps)
+    # Train Adaboost classifier with the training data
+    boost.build_classifier(training_data)
+
+    # Validate classifier with test_data
+    rights = 0
+    wrongs =  0
+    for sample in test_data:
+        if sample[9] == "positive" and boost.classify(sample) == 1:
+            rights+= 1
+        elif sample[9] == "negative" and boost.classify(sample) == -1:
+            rights+= 1
+        else:
+            wrongs+= 1
+    kfold_accuracy += (rights/(rights+wrongs)*1/k)
+    print([rights,wrongs])
+
+
+print("The final accuracy of boost with "+str(nstumps) + " weak classifiers is : " + str(kfold_accuracy))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #acertos = 0
 #erros =  0
