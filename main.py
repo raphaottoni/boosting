@@ -20,6 +20,8 @@ subset_size = int(len(games)/k)
 
 kfold_accuracy = 0.0
 
+print("\033[93mThis algorithm should be executed with python3, otherwise it WONT work!\033[0m")
+
 print("\033[1mEvaluating Adaboost with " +  str(k) + "-folds algorithm\033[0m")
 
 for i in range(k):
