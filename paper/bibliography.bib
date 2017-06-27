@@ -1,0 +1,524 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Gerry Murray",
+%%%     version         = "1.2",
+%%%     date            = "2 April 2012",
+%%%     filename        = "acmsmall-sample-bibfile.bib",
+%%%     address         = "ACM, NY",
+%%%     email           = "murray at hq.acm.org",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "ACM Reference Format, bibliography, citation, references",
+%%%     supported       = "yes",
+%%%     docstring       = "This BibTeX database file contains 'bibdata' entries
+%%%                        that 'match' the examples provided in the Specifications Document
+%%%                        AND, also, 'legacy'-type bibs. It should assist authors in 
+%%%                        choosing the 'correct' at-bibtype and necessary bib-fields
+%%%                        so as to obtain the appropriate ACM Reference Format output. 
+%%%			   It also contains many 'Standard Abbreviations'. "
+%%%  }
+%%% ====================================================================
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+%Entries
+@article{hamilton2016diachronic,
+  title={Diachronic word embeddings reveal statistical laws of semantic change},
+  author={Hamilton, William L and Leskovec, Jure and Jurafsky, Dan},
+  journal={Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics},
+  year={2016},
+  month="August",
+  pages="1489-1501"
+},
+@article{example,
+  author 	= "Patricia S. Abril and Robert Plant",
+  title 	= "The patent holder's dilemma: Buy, sell, or troll?",
+  journal 	= "Communications of the ACM",
+  volume 	= "50",
+  number 	= "1",
+  month 	= jan,
+  year 		= "2007",
+  pages 	= "36--44",
+  doi 		= "10.1145/1188913.1188915",
+  url		= "http://doi.acm.org/10.1145/1219092.1219093",
+  note		= "",
+},
+
+@inproceedings{bolukbasi2016man,
+  title={Man is to computer programmer as woman is to homemaker? debiasing word embeddings},
+  author={Bolukbasi, Tolga and Chang, Kai-Wei and Zou, James Y and Saligrama, Venkatesh and Kalai, Adam T},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={4349--4357},
+  year={2016}
+},
+
+@article{goodman2016european,
+  title={European Union regulations on algorithmic decision-making and a" right to explanation"},
+  author={Goodman, Bryce and Flaxman, Seth},
+  journal={arXiv preprint arXiv:1606.08813},
+  year={2016}
+},
+
+@article{diakopoulos2016,
+author = {Nicholas Diakopoulos and Michael Koliska},
+title = {Algorithmic Transparency in the News Media},
+journal = {Digital Journalism},
+volume = {0},
+number = {0},
+pages = {1-20},
+year = {2016},
+doi = {10.1080/21670811.2016.1208053},
+URL = { 
+        http://dx.doi.org/10.1080/21670811.2016.1208053
+},
+eprint = { 
+        http://dx.doi.org/10.1080/21670811.2016.1208053
+}
+
+},
+
+
+@inproceedings{ribeiro2016,
+  title={Why Should I Trust You?: Explaining the Predictions of Any Classifier},
+  author={Ribeiro, Marco Tulio and Singh, Sameer and Guestrin, Carlos},
+  booktitle={Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  pages={1135--1144},
+  year={2016},
+  organization={ACM}
+},
+@article{lipton2016mythos,
+  title={The mythos of model interpretability},
+  author={Lipton, Zachary C},
+  journal={arXiv preprint arXiv:1606.03490},
+  year={2016}
+},
+
+@Misc{europaGDPR2016,
+  title =  {REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 27 April 2016},
+  author =   {European Union law},
+  year =   2016,
+  howpublished = {\url{http://bit.ly/1TtydR4}},
+  note = {Accessed: 2017-05-22}
+}
+
+@article {caliskan2017semantics,
+	author = {Caliskan, Aylin and Bryson, Joanna J. and Narayanan, Arvind},
+	title = {Semantics derived automatically from language corpora contain human-like biases},
+	volume = {356},
+	number = {6334},
+	pages = {183--186},
+	year = {2017},
+	doi = {10.1126/science.aal4230},
+	publisher = {American Association for the Advancement of Science},
+	issn = {0036-8075},
+	URL = {http://science.sciencemag.org/content/356/6334/183},
+	eprint = {http://science.sciencemag.org/content/356/6334/183.full.pdf},
+	journal = {Science}
+}
+
+@inproceedings{anupam2016algorithmic,
+  author    = {Anupam Datta and
+               Shayak Sen and
+               Yair Zick},
+  title     = {Algorithmic Transparency via Quantitative Input Influence: Theory
+               and Experiments with Learning Systems},
+  booktitle = {{IEEE} Symposium on Security and Privacy, {SP} 2016, San Jose, CA,
+               USA, May 22-26, 2016},
+  pages     = {598--617},
+  year      = {2016},
+  url       = {http://dx.doi.org/10.1109/SP.2016.42},
+  doi       = {10.1109/SP.2016.42},
+  timestamp = {Tue, 20 Sep 2016 12:04:24 +0200},
+  biburl    = {http://dblp2.uni-trier.de/rec/bib/conf/sp/DattaSZ16},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@article{zliobaite2015survey,
+  author    = {Indre Zliobaite},
+  title     = {A survey on measuring indirect discrimination in machine learning},
+  journal   = {CoRR},
+  volume    = {abs/1511.00148},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1511.00148},
+  timestamp = {Tue, 01 Dec 2015 19:22:34 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/Zliobaite15a},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+
+@misc{hardt2014how,
+  author = {Hardt, Moritz },
+  title = {How big data is unfair},
+  year = 2014,
+  howpublished = {\url{https://medium.com/@mrtz/how-big-data-is-unfair-9aa544d739de#.xy0tjpua3}},
+  note = {Accessed: 2016-12-24}
+}
+
+@article{barocas2014big,
+  title={Big data's disparate impact},
+  author={Barocas, Solon and Selbst, Andrew D},
+  journal={Available at SSRN 2477899},
+  year={2014}
+}
+
+@article{tipples2010time,
+  title={Time flies when we read taboo words},
+  author={Tipples, Jason},
+  journal={Psychonomic Bulletin \& Review},
+  volume={17},
+  number={4},
+  pages={563--568},
+  year={2010},
+  publisher={Springer}
+}
+
+@incollection{mikolov2013distributed,
+title = {Distributed Representations of Words and Phrases and their Compositionality},
+author = {Mikolov, Tomas and Sutskever, Ilya and Chen, Kai and Corrado, Greg S and Dean, Jeff},
+booktitle = {Advances in Neural Information Processing Systems 26},
+editor = {C. J. C. Burges and L. Bottou and M. Welling and Z. Ghahramani and K. Q. Weinberger},
+pages = {3111--3119},
+year = {2013},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf}
+}
+
+@article{greenstein2016,
+	title = {How {W}ikipedia keeps political discourse from turning ugly},
+    author = {Shane Greenstein and Feng Zhu},
+    journal = {Harvard Business Review (website)},
+    year = {2016},
+    url = {https://hbr.org/2016/11/how-wikipedia-keeps-political-discourse-from-turning-ugly}
+}
+
+@inproceedings{hamilton2016diachronic,
+    author = {Hamilton, L. William and Leskovec, Jure and Jurafsky, Dan},
+    booktitle = {Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+    doi = {10.18653/v1/P16-1141},
+    location = {Berlin, Germany},
+    pages = {1489--1501},
+    publisher = {Association for Computational Linguistics},
+    title = {{Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change}},
+    url = {http://aclweb.org/anthology/P16-1141},
+    year = {2016}
+}
+
+@inproceedings{tang2014learning,
+  title={Learning Sentiment-Specific Word Embedding for Twitter Sentiment Classification.},
+  author={Tang, Duyu and Wei, Furu and Yang, Nan and Zhou, Ming and Liu, Ting and Qin, Bing},
+  booktitle={ACL (1)},
+  pages={1555--1565},
+  year={2014}
+}
+
+@inproceedings{huang2015neural,
+  title={A Neural Probabilistic Model for Context Based Citation Recommendation.},
+  author={Huang, Wenyi and Wu, Zhaohui and Chen, Liang and Mitra, Prasenjit and Giles, C Lee},
+  booktitle={AAAI},
+  pages={2404--2410},
+  year={2015}
+}
+
+@article{mittelstadt2016ethics,
+author = {Brent Daniel Mittelstadt and Patrick Allo and Mariarosaria Taddeo and Sandra Wachter and Luciano Floridi},
+title = {The ethics of algorithms: Mapping the debate},
+journal = {Big Data \& Society},
+volume = {3},
+number = {2},
+pages = {2053951716679679},
+year = {2016},
+doi = {10.1177/2053951716679679},
+URL = {http://dx.doi.org/10.1177/2053951716679679},
+eprint = {http://dx.doi.org/10.1177/2053951716679679}
+}
+
+@article{jordan2015machine,
+  title={Machine learning: Trends, perspectives, and prospects},
+  author={Jordan, Michael I and Mitchell, Tom M},
+  journal={Science},
+  volume={349},
+  number={6245},
+  pages={255--260},
+  year={2015},
+  publisher={American Association for the Advancement of Science}
+}
+
+@article{song2016word,
+  title={Word embeddings, sense embeddings and their application to word sense induction},
+  author={Song, Linfeng},
+  journal={The University of Rochester, April},
+  year={2016}
+}
+
+@INPROCEEDINGS{cunha14_ht,
+author = {Evandro Cunha and Gabriel Magno and Marcos Andr{\'e} Gon{\c{c}}alves and C{\'e}sar Cambraia and Virgilio Almeida},
+title = {How you post is who you are: Characterizing {G}oogle+ status updates across social groups},
+booktitle = {Proceedings of the 25th ACM Conference on Hypertext and Social Media (HT'14)},
+year = {2014},
+pages = {212--217},
+month = sep,
+venue = {Santiago, Chile},
+publisher = {Association for Computing Machinery (ACM)},
+address = {New York, NY, USA},
+doi = {10.1145/2631775.2631822},
+}
+
+@inproceedings{ottoni2013ladies,
+  title={Ladies First: Analyzing Gender Roles and Behaviors in Pinterest},
+  author={Ottoni, Raphael and Pesce, Joao Paulo and Las Casas, Diego B and Franciscani Jr, Geraldo and Meira Jr, Wagner and Kumaraguru, Ponnurangam and Almeida, Virg{\'\i}lio AF},
+  booktitle={ICWSM},
+  year={2013}
+}
+
+@book{jolliffe2002principal,
+  title={Principal component analysis},
+  author={Jolliffe, Ian},
+  year={2002},
+  publisher={Wiley Online Library}
+}
+
+@article{wold1987principal,
+  title={Principal component analysis},
+  author={Wold, Svante and Esbensen, Kim and Geladi, Paul},
+  journal={Chemometrics and intelligent laboratory systems},
+  volume={2},
+  number={1-3},
+  pages={37--52},
+  year={1987},
+  publisher={Elsevier}
+}
+
+@inproceedings{mesnil2013investigation,
+  title={Investigation of recurrent-neural-network architectures and learning methods for spoken language understanding},
+  author={Mesnil, Gr{\'e}goire and He, Xiaodong and Deng, Li and Bengio, Yoshua},
+  booktitle={Interspeech},
+  pages={3771--3775},
+  year={2013}
+}
+
+@inproceedings{levy2014neural,
+  title={Neural word embedding as implicit matrix factorization},
+  author={Levy, Omer and Goldberg, Yoav},
+  booktitle={Advances in neural information processing systems},
+  pages={2177--2185},
+  year={2014}
+}
+
+@inproceedings{mesnil2013investigation,
+  title={Investigation of recurrent-neural-network architectures and learning methods for spoken language understanding.},
+  author={Mesnil, Gr{\'e}goire and He, Xiaodong and Deng, Li and Bengio, Yoshua},
+  booktitle={Interspeech},
+  pages={3771--3775},
+  year={2013}
+}
+
+@inproceedings{tai2015semantic,
+  author    = {Kai Sheng Tai and
+               Richard Socher and
+               Christopher D. Manning},
+  title     = {Improved Semantic Representations From Tree-Structured Long Short-Term
+               Memory Networks},
+  booktitle = {Proceedings of the 53rd Annual Meeting of the Association for Computational
+               Linguistics and the 7th International Joint Conference on Natural
+               Language Processing of the Asian Federation of Natural Language Processing,
+               {ACL} 2015, July 26-31, 2015, Beijing, China, Volume 1: Long Papers},
+  pages     = {1556--1566},
+  year      = {2015},
+  crossref  = {DBLP:conf/acl/2015-1},
+  url       = {http://aclweb.org/anthology/P/P15/P15-1150.pdf},
+  timestamp = {Sun, 02 Aug 2015 19:26:07 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/acl/TaiSM15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}

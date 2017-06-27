@@ -2,10 +2,21 @@ from boost import Boost
 import datareader
 #from kfold import kfold
 from random import shuffle
+import argparse
 
 # Open file to create csv
 output = open("results.csv","w" )
 output.write("nstumps,test_error,training_error,stump_error,stump_alpha\n")
+
+
+
+# Create parser
+parser = argparse.ArgumentParser(description='Adaboost algorithm for Tic Tac Toe dataset')
+parser.add_argument('nstumps', metavar='nstumps', type=int, default=5,
+                            help='The number of Weak Classifiers that will be used')
+
+#Parse
+args = parser.parse_args()
 
 
 # Read dataset
@@ -15,7 +26,7 @@ games = datareader.readGames('./dataset/tic-tac-toe.data')
 k = 5
 
 # Define nstumps as in the number of weak classifiers that would be used
-nstumps = 10
+nstumps = args.nstumps
 
 # Shuffle the dataset
 shuffle(games)

@@ -1,0 +1,24 @@
+\section{Dataset}\label{sec:dataset}
+
+O \emph{dataset} utilizado neste experimento é o \emph{tic-tac-toe}, disponível em \url{https://archive.ics.uci.edu/ml/datasets/Tic-Tac-Toe+Endgame}. Cada linha desde \emph{dataset} representa um jogo da velha realizado e o label de qual jogador venceu aquela partida. Caso tenha sido o jogador "x" ele é positivo e se foi o jogador "o", este label é negativo. É interessante relatar, que nesta base da dados, não há exemplos de empate. Acredito que isto tenha sido feito propositalmente para que padecemos utilizar um classificador binário na classificação ao invés  de alguma outra técnica, por exemplo a \emph{one-against-all}. A tabela~\ref{tab:dataset} mostra a caracterização deste \emph{dataset}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lc}
+\textbf{Vencedor} & \textbf{Quantidade} \\ \hline 
+x        & 626       \\
+o        & 332       \\
+total    & 958       \\
+\label{tab:dataset}
+\end{tabular}
+\caption{Tic-Tac-Toe Dataset}
+\end{table} 
+
+
+Como dito antes, cada linha dos dados representa uma instância do jogo em que o jogador `x' ganhou ("positive") ou perder ("negative"). A figura~\ref{fig:representation} descreve com mais detalhe a representação de um jogo: um vetor de 10 posições, em que as primeiras nove são mapeadas diretamente para as 9 posições de um jogo da velha ( começando do canto superior esquerdo), seguido de um label mostrando se o jogador 'x' ganhou ou perdeu. Cada uma das 9 primeiras posições contem um dos três valores possíveis: 'b' para blank, 'x' para o primeiro jogador e 'o' para o segundo.   
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{imgs/game_representation.png}
+  \caption{Representação de um jogo.}
+  \label{fig:representation}
+\end{figure}

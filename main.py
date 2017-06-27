@@ -1,7 +1,16 @@
 from boost import Boost
 import datareader
-#from kfold import kfold
 from random import shuffle
+import argparse
+
+
+# Create parser
+parser = argparse.ArgumentParser(description='Adaboost algorithm for Tic Tac Toe dataset')
+parser.add_argument('nstumps', metavar='nstumps', type=int, default=5,
+                            help='The number of Weak Classifiers that will be used')
+
+#Parse
+args = parser.parse_args()
 
 # Read dataset
 games = datareader.readGames('./dataset/tic-tac-toe.data')
@@ -9,8 +18,8 @@ games = datareader.readGames('./dataset/tic-tac-toe.data')
 # Define K as in kfold
 k = 5
 
-# Define nstumps as in the number of weak classifiers that would be used
-nstumps = 5
+# Define nstumps as in the number of weak classifiers that would be used as passed by argparse, default 5
+nstumps = args.nstumps
 
 # Shuffle the dataset
 shuffle(games)
@@ -48,4 +57,3 @@ for i in range(k):
 
 
 print("\033[95mThe final accuracy of boost with "+str(nstumps) + " weak classifiers is : " + str(kfold_accuracy))
-
