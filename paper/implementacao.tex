@@ -141,8 +141,8 @@ Um pseudo código simples de funcionamento desta classe, pode ser visto em Algor
 Conforme informado anteriormente, foram disponibilizado dois programas principais: 1) main.py e 2) main\_step\_by\_step.py. Todos eles são executados a mesma maneira:
 
 \begin{verbatim}
-	./python3 main.py <number\_of\_stumps>
-	./python3 main_step_by_step.py <number\_of\_stumps>
+	./python3 main.py <number_of_stumps>
+	./python3 main_step_by_step.py <number_of_stumps>
 \end{verbatim}
 
 A única diferença entre eles, é que no main.py, já é reportado o resultado final do \emph{Adaboost}, já tendo escolhido os 5 \emph{stumps} (Figura.~\ref{fig:main_5}).
@@ -165,7 +165,7 @@ Já o main\_step\_by\_step.py, ele apresentará os resultados parciais de cada e
 Vale a pena atentar para o fato de que os resultados do \emph{Adaboost} com 1 ou 2 stumps são exatamente os mesmos, como mostrado na Figura.~\ref{fig:main2_2}. Este comportamento especifico é esperado pois para cada novo stump escolhido o alpha associado a ele tende a ser menor que o anterior. Logo, no caso de uma combinação de dois classificadores fracos, a classificação sempre será a mesma da da pelo primeiro classificador fraco pois seu alpha é maior que o alpha do segundo, logo a soma do produto da classificação dos dois pelos seus alphas (Algoritimo~\ref{pseudocode:adaboost}, passo 3) sempre terá o sinal do primeiro classificador fraco.
 
 
-\subsection{Decisões}
+\subsection{Decisões de implementação}
 Durante a implementação do algoritmo, algumas decisões importantes foram feitas:
 
 \begin{itemize}
